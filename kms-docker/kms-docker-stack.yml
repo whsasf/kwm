@@ -1,0 +1,142 @@
+version: "3.8"
+
+services:
+
+    mongodb:
+        image: mongo
+        command: /scripts/mongo-run.sh
+        working_dir: /scripts/
+        ports:
+            - "27017:27017"
+        environment:
+          MONGO_REPLICA_SET_NAME: kms
+          MONGO_REPLICAS: mongodb:27017
+          MONGO_REPLICA_SET_MEMBERS: "[{'_id':0,'host':'mongodb:27017','priority':1}]"
+          MONGO_USER_ROOT_NAME: root
+          MONGO_USER_ROOT_PASSWORD: root
+          MONGO_AUTH_SOURCE: admin
+          MONGO_BIND_IP: "0.0.0.0"
+          MONGO_USER_ADMIN_NAME: admin
+          MONGO_USER_ADMIN_PASSWORD: admin
+        volumes:
+            - "/etc/localtime:/etc/localtime:ro"
+            - "./mongodb/db:/data/db/"
+            - "./mongodb/scripts:/scripts"
+        deploy:
+            replicas: 1
+            restart_policy:
+                    condition: on-failure
+                    delay: 5s
+                    max_attempts: 5
+                    window: 120s
+
+    #mongo-express:
+    #  image: mongo-express
+    #  depends_on:
+    #    - mongodb
+    #  ports:
+    #    - 8087:8081
+    #  environment:
+    #    ME_CONFIG_OPTIONS_EDITORTHEME: 3024-night
+    #    ME_CONFIG_MONGODB_SERVER: mongodb
+    #    ME_CONFIG_BASICAUTH_USERNAME: root
+    #    ME_CONFIG_BASICAUTH_PASSWORD: root
+    #    ME_CONFIG_MONGODB_ADMINUSERNAME: root
+    #    ME_CONFIG_MONGODB_ADMINPASSWORD: root
+    #  deploy:
+    #        replicas: 1
+    #        restart_policy:
+    #                condition: on-failure
+    #                delay: 5s
+    #                max_attempts: 5
+    #                window: 120s  
+
+    elasticsearch7:
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
+        ports:
+          - "9200:9200"
+          - "9300:9300"
+        environment:
+            - discovery.type=single-node
+            - http.cors.enabled=true
+            - http.cors.allow-origin=http://dejavu:1358,http://localhost:1358,http://127.0.0.1:1358
+            - http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization
+            - http.cors.allow-credentials=true
+            - bootstrap.memory_lock=true
+            #- xpack.security.enabled=true
+            - 'ES_JAVA_OPTS=-Xms512m -Xmx512m'
+        volumes:
+          - "/etc/localtime:/etc/localtime:ro"
+          - "./elasticsearch/data:/usr/share/elasticsearch/data"
+        deploy:
+          replicas: 1
+          restart_policy:
+                  condition: on-failure
+                  delay: 5s
+                  max_attempts: 5
+                  window: 120s  
+    
+    #dejavu:
+    #  image: appbaseio/dejavu:3.2.3
+    #  ports:
+    #      - '1358:1358'
+    #  volumes:
+    #    - "/etc/localtime:/etc/localtime:ro"
+    #  depends_on:
+    #    - elasticsearch7
+
+    #kibana7:
+    #    image: docker.elastic.co/kibana/kibana:7.9.2
+    #    ports:
+    #      - "5601:5601"
+    #    volumes:
+    #      - "/etc/localtime:/etc/localtime:ro"
+    #    environment:
+    #      ELASTICSEARCH_HOSTS: http://elasticsearch7:9200
+    #    deploy:
+    #      replicas: 1
+    #      restart_policy:
+    #              condition: on-failure
+    #              delay: 5s
+    #              max_attempts: 5
+    #              window: 120s 
+
+    monstache:
+        image: rwynn/monstache
+        working_dir: /app
+        command: -f ./monstache.config.toml
+        volumes:
+          - "/etc/localtime:/etc/localtime:ro"
+          - "./monstache.config.toml:/app/monstache.config.toml"
+        depends_on:
+          - mongodb
+          - elasticsearch7
+        ports:
+          - "8088:8088"
+        deploy:
+            replicas: 1
+            restart_policy:
+                    condition: on-failure
+                    delay: 5s
+                    max_attempts: 5
+                    window: 120s  
+     
+    #kmsmain:
+    #    image: whsasf/kms:v1
+    #    ports:
+    #        - "3000:3000"
+    #    volumes:
+    #        - "/etc/localtime:/etc/localtime:ro"
+    #    depends_on:
+    #        - mongodb
+    #    deploy:
+    #        replicas: 1
+    #        restart_policy:
+    #                condition: on-failure
+    #                delay: 5s
+    #                max_attempts: 5
+    #                window: 120s
+
+networks:
+    kms:
+      driver: bridge

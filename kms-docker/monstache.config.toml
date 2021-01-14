@@ -1,0 +1,35 @@
+# connection settings
+
+# connect to MongoDB using the following URL
+mongo-url = "mongodb://root:root@mongodb:27017/?replicaSet=kms"
+# mongo-url = "mongodb://root:sccgoodToGo@114.67.109.244:27017/?replicaSet=kms"
+# connect to the Elasticsearch REST API at the following node URLs
+elasticsearch-urls = ["http://elasticsearch7:9200/"]
+
+
+#direct-read-namespaces = [ 'KWM.User','KWM.Project' ] # 如果想=选择需要 直接读的数据库， 只能这样写，目前不支持正则。所以，使用了下面的方法
+direct-read-namespaces = ['']  # 自动屏蔽了 admin config local 3个 系统数据库
+direct-read-dynamic-exclude-regex = '^KWM.User$' # 排除 KWM.User
+namespace-regex = '^KWM'
+
+gzip = true
+stats = true
+index-stats = true
+
+elasticsearch-max-conns = 4
+elasticsearch-max-seconds = 5
+elasticsearch-max-bytes = 8000000 
+
+dropped-collections = true
+dropped-databases = true
+
+resume = true
+resume-write-unsafe = true
+resume-name = "default"
+index-files = false
+file-highlighting = false
+verbose = true
+exit-after-direct-reads = false
+
+index-as-update=true
+index-oplog-time=false # 是否添加  oplog_ts 和  oplog_date 两项，在 es 中

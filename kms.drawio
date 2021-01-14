@@ -1,0 +1,141 @@
+<mxfile host="65bd71144e" modified="2020-10-23T13:42:06.029Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="vNBWmh4V6bmfCeVdkkOp" version="13.6.5">
+    <diagram id="frGpf72hCrPaMrtKEsUL" name="Page-1">
+        <mxGraphModel dx="907" dy="1735" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="h1KzrUeriGMz1mqXPlRu-0"/>
+                <mxCell id="h1KzrUeriGMz1mqXPlRu-1" parent="h1KzrUeriGMz1mqXPlRu-0"/>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1" source="0mAyllnLk0b46EL0y8WJ-0" target="0mAyllnLk0b46EL0y8WJ-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-0" value="&lt;h2&gt;urls（起点）&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="281" y="45" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1" source="0mAyllnLk0b46EL0y8WJ-2">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="486" y="226" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="336" y="226"/>
+                            <mxPoint x="486" y="226"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-2" value="&lt;h3&gt;语料(页面内容)&lt;/h3&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="276" y="146" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=7;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1" source="0mAyllnLk0b46EL0y8WJ-4" target="0mAyllnLk0b46EL0y8WJ-2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-4" value="&lt;h2&gt;爬虫系统&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="491" y="105" width="120" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1" source="0mAyllnLk0b46EL0y8WJ-7" target="0mAyllnLk0b46EL0y8WJ-8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-7" value="&lt;font color=&quot;#00cc00&quot;&gt;mongo&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="140" y="48" width="50" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-8" value="&lt;font color=&quot;#00cc00&quot;&gt;elasticsearch&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="10" y="28" width="80" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=7;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1" source="0mAyllnLk0b46EL0y8WJ-10" target="0mAyllnLk0b46EL0y8WJ-13">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="516" y="326" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="551" y="286"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-10" value="&lt;h2&gt;分词系统&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="491" y="201" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1" source="0mAyllnLk0b46EL0y8WJ-13">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="486" y="336" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="336" y="336"/>
+                            <mxPoint x="456" y="336"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-13" value="&lt;h2&gt;基础词&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="276" y="266" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1" source="0mAyllnLk0b46EL0y8WJ-15">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="406" y="386" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="555" y="386"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-15" value="&lt;h2&gt;拓词系统&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="493" y="318" width="123" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-17" value="&lt;h2&gt;拓展词&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="276" y="366" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-22" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="194" y="71" as="sourcePoint"/>
+                        <mxPoint x="274" y="70.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-25" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="194" y="168.5" as="sourcePoint"/>
+                        <mxPoint x="274" y="168" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-26" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="196" y="286" as="sourcePoint"/>
+                        <mxPoint x="276" y="285.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-27" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="194" y="381" as="sourcePoint"/>
+                        <mxPoint x="274" y="380.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-28" value="&lt;h2&gt;用户词&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="716" y="114" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-29" value="&lt;h2&gt;停止词&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="717" y="193" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-30" value="&lt;h2&gt;无效词&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="721" y="268" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-32" value="" style="endArrow=classic;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="710" y="135" as="sourcePoint"/>
+                        <mxPoint x="620" y="198" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-33" value="" style="endArrow=classic;html=1;strokeWidth=7;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="710" y="214" as="sourcePoint"/>
+                        <mxPoint x="618" y="214" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="668" y="214"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-34" value="" style="endArrow=classic;html=1;strokeWidth=7;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="h1KzrUeriGMz1mqXPlRu-1" source="0mAyllnLk0b46EL0y8WJ-30">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="706" y="238" as="sourcePoint"/>
+                        <mxPoint x="616" y="238" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-35" value="&lt;h2&gt;&lt;font color=&quot;#66cc00&quot;&gt;KMS功能导图&lt;/font&gt;&lt;/h2&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="351" y="8" width="132" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="0mAyllnLk0b46EL0y8WJ-36" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 15px ; color: rgb(51 , 255 , 51)&quot;&gt;1.&amp;nbsp; 用户词: 告诉分词系统，在分词的时候，不要把我定义的用户词再分，比如定义用户词 '买东西' ，那么就不要再分成买跟东西两个词了&lt;/span&gt;&lt;/div&gt;&lt;font color=&quot;#33ff33&quot; style=&quot;font-size: 15px&quot;&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;2. 停止词跟无效词，作用类似，告诉分析系统，不要返回我不需要的词&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;3. mongodb 跟 elasticsearch 同步之后，所有的 写操作，仍然去往 mongo，但是读两个都可(同步时间极快)，需要利用全文索引特性的，建议去往es&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;4. 后续操作，主要基于拓展词进行了&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h1KzrUeriGMz1mqXPlRu-1">
+                    <mxGeometry x="12" y="420" width="803" height="130" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
